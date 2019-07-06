@@ -1,0 +1,11 @@
+flask_wtf
+wtforms
+sklearn
+BytesIO
+base64
+io
+flask
+pandas
+numpy
+matplotlib
+statistics
