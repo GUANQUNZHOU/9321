@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block body_contents %}
+
+    <div class = "specific_graph">
+
+        {% if error is defined %}
+        <div class = "bomb_box">
+        </div>
+        <script type="text/javascript">
+            alert("All fields Required")
+        </script>
+        {% endif %}
+
+
+        {% if form is defined %}
+        <h1 > Heart Disease Predictor </h1>
+        <p> Given a set of certain attributes. We will predict whether you will have
+        Heart Disease or not </p>
+        <p> Our technique is logsitic regression. </p>
+
+        <form action = "/part3" method = "POST" style="z-index = -1;">
+         <fieldset>
+            {{ form.hidden_tag() }}
+            <div class='fd'>Please enter your age:<div style="width: 100%;"> </div>{{ form.age (placeholder = 'eg. 50', class = 'form_dec')}}</div>
+            <div class='fd'>Please choose your sex:<div style="width: 100%;"> {{ form.sex (class = 'checkbox_dec') }}</div></div>
+            <div class='fd'>Please choose your chest pain type:<div style="width: 100%">   {{ form.chest_pain_type (class = 'checkbox_dec')}}</div></div>
+            <div class='fd'>Please enter your resting blood pressure:<div style="width: 100%"> {{ form.resting_blood_pressure (placeholder = 'eg. 150', class = 'form_dec') }}</div></div>
+            <div class='fd'>Please enter your serum cholesterol:<div style="width: 100%">  {{ form.serum_cholesterol (placeholder = 'eg. 2', class = 'form_dec') }}</div></div>
+            <div class='fd'>Please choose your fasting blood sugar:<div style="width: 100%"> {{ form.fasting_blood_sugar (class = 'checkbox_dec') }}</div></div>
+            <div class='fd'>Please choose your resting electrocardio results:<div style="width: 100%;"> {{ form.resting_electrocardio_results (class = 'checkbox_dec') }}c</div>
+            <div class='fd'>Please enter your maximum heart rate:<div style="width: 100%"> {{ form.maximum_heart_rate (placeholder = 'eg. 150', class = 'form_dec') }}</div></div>
+            <div class='fd'>Please choose your exercise induced angina:<div style="width: 100%"> {{ form.exercise_induced_angina (class = 'checkbox_dec')}}</div></div>
+            <div class='fd'>Please choose your ST Depression:<div style="width: 100%;"> {{ form.st_depression (placeholder = 'eg. 150', class = 'form_dec')}}</div></div>
+            <div class='fd'>Please choose your slope peak:<div style="width: 100%;"> {{ form.slope_peak  (class = 'checkbox_dec')}}</div></div>
+            <div class='fd'>Please choose your major vessels:<div style="width: 100%;"> {{ form.major_vessels (class = 'checkbox_dec')}}</div></div>
+            <div class='fd'>Please choose your thalassemia:<div style="width: 100%;"> {{ form.thalassemia (class = 'checkbox_dec')}} </div></div>
+            <div style="width: 50%; margin: 0 auto;"> {{ form.submit (class ='button_dec')}} </div>
+         </fieldset>
+
+      </form>
+        {% else %}
+             {% if heart_disease > 0 %}
+                <h2> No Heart Disease </h2>
+             {% else %}
+                <h2> Might get Heart Disease </h2>
+             {% endif %}
+
+		<p> The following graph shows the correlation of the subset of features sorted by ranking from part 2(x-axis) to the accuracy of the model (y-axis).
+
+       </p>
+
+             <p><img src = "{{ graph }}" ></p>
+
+        <a class = retry_button href="/part3">Retry</a>
+
+        {% endif %}
+    </div>
+
+
+{% endblock %}

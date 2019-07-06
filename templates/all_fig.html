@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: auto;
+  background-color: #FFCC00;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+#Go_back_button {
+  background-color: green;
+  padding: .5em;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 6px;
+  color: #fff;
+  font-family: 'Oswald';
+  font-size: 20px;
+  text-decoration: none;
+  border: none;
+}
+
+#Go_back_button:hover {
+  border: none;
+  background: orange;
+  box-shadow: 0px 0px 1px #777;
+}
+
+#Go_back_button:active {
+  transform: translateY(10px);
+  transition: 1s;
+}
+</style>
+<body>
+
+<button id="Go_back_button" onclick="history.back()">
+  Go back!
+</button>
+
+<h2 style="text-align:center">Statistics visualize</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 11</div>
+    <img src="{{ q3 }}">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 11</div>
+    <img src="{{ q4 }}">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 11</div>
+    <img src="{{ q5 }}">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 11</div>
+    <img src="{{ q6 }}">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 11</div>
+    <img src="{{ q7 }}">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 11</div>
+    <img src="{{ q8 }}">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">7 / 11</div>
+    <img src="{{ q9 }}">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">8 / 11</div>
+    <img src="{{ q10 }}">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">9 / 11</div>
+    <img src="{{ q11 }}">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">10 / 11</div>
+    <img src="{{ q12 }}">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">11 / 11</div>
+    <img src="{{ q13 }}">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="{{ q3 }}" style="width:100%" onclick="currentSlide(1)" alt="chest pain">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{{ q4 }}" style="width:100%" onclick="currentSlide(2)" alt="resting blood pressure">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{{ q5 }}" style="width:100%" onclick="currentSlide(3)" alt="serum cholestoral">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{{ q6 }}" style="width:100%" onclick="currentSlide(4)" alt="fasting blood sugar">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{{ q7 }}" style="width:100%" onclick="currentSlide(5)" alt="resting electrocardiographic results">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{{ q8 }}" style="width:100%" onclick="currentSlide(6)" alt="maximum heart rate achieved">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{{ q9 }}" style="width:100%" onclick="currentSlide(7)" alt="exercise induced angina">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{{ q10 }}" style="width:100%" onclick="currentSlide(8)" alt="ST depression induced by exercise relative to rest">
+    </div>
+        <div class="column">
+      <img class="demo cursor" src="{{ q11 }}" style="width:100%" onclick="currentSlide(9)" alt="the slope of the peak exercise ST segment">
+    </div>
+        <div class="column">
+      <img class="demo cursor" src="{{ q12 }}" style="width:100%" onclick="currentSlide(10)" alt="number of major vessels (0-3) colored by flourosopy">
+    </div>
+        <div class="column">
+      <img class="demo cursor" src="{{ q13 }}" style="width:100%" onclick="currentSlide(11)" alt="thal(Thalassemia)">
+    </div>
+
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+</html>

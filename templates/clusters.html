@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block body_contents %}
+
+    <div class = specific_graph>
+
+        <h1> Clusters </h1>
+        <p> The following cluster shows certain clusters between those with heart disease and those without heart disease.
+            We can explore the clusters between all attributes by applying K-Means clustering to all the data then we use PCA to reduce the dimensionality of the the 11 features used to 2 features so that we are able to visualise it. </p>
+           <div>
+            <img src="{{ graph }}" class="center">
+          </div>
+    </div>
+
+{% endblock %}

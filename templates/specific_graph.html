@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block body_contents %}
+
+      <div class = "specific_graph">
+          <h1> {{ title }} </h1>
+
+           <div>
+            <img src="{{ graph }}" class="center">
+          </div>
+
+          <button id="Go_back_button" onclick="history.back()">
+            Go back!
+          </button>
+
+            <!-- CHEST PAIN TYPE -->
+          {% if graph_no == 1 %}
+
+            <p> Several observations that can be made from this analysis
+            Chest pain type only occurs for the older age groups most common in
+            </p>
+          {% endif %}
+
+
+          <!-- Resting blood pressure -->
+          {% if graph_no == 2 %}
+          <p>
+              Observation of blood pressure, yellow and green represent female and male seperately.
+          </p>
+          {% endif %}
+
+
+          <!-- Serum Cholestoral -->
+          {% if graph_no == 3 %}
+          <p>
+              Cholesterol is a type of body fat, or lipid. A serum cholesterol level is a measurement of certain elements in the blood, including the amount of high- and low-density lipoprotein cholesterol (HDL and LDL) in a person's blood. Basically, the total serum cholesterol of all aged 19 and younger should be at most 170 mg/dL, and females or males aged 20 and older should be at most 125–200 mg/dL. Blue one represent the male, and red one represent female.
+          </p>
+          {% endif %}
+
+          
+          <!-- Fasting Blood Sugar -->
+          {% if graph_no == 4 %}
+          <p>
+              Fasting blood sugar levels give vital clues about how a person's body is managing blood sugar.
+              There is two group at graph, Left one is less than 120 mg/dl, and right one is bigger than 120 mg/dl.Below is the criteria of Fasting test results.
+              <ul>
+                  <li>Normal: 3.9 to 5.4 mmols/l (70 to 99 mg/dl)</li>
+                  <li>Prediabetes or Impaired Glucose Tolerance: 5.5 to 6.9 mmol/l (100 to 125 mg/dl)</li>
+                  <li>Diagnosis of diabetes: 7.0 mmol/l (126 mg/dl) or above</li>
+              </ul>
+          </p>
+          {% endif %}
+
+          
+          <!-- Electrocardiographic Results -->
+          {% if graph_no == 5 %}
+          <p>
+              Resting 12-lead electrocardiography (ECG) is a non-invasive test that can detect abnormalities including arrhythmias, evidence of coronary heart disease, left ventricular hypertrophy and bundle branch blocks.
+          </p>
+          {% endif %}
+
+
+          <!-- Maximum Heart Rate Achieved -->
+          {% if graph_no == 6 %}
+          <p>
+              An estimate of a person's maximum age-related heart rate can be obtained by subtracting the person's age from 220. For example, for a 50-year-old person, the estimated maximum age-related heart rate would be calculated as 220 - 50 years = 170 beats per minute (bpm).
+          </p>
+          {% endif %}
+
+
+          <!-- Exercise Induced Angina -->
+          {% if graph_no == 7 %}
+          <p>
+              Angina is a type of chest pain caused by reduced blood flow to the heart. Angina (an-JIE-nuh or AN-juh-nuh) is a symptom of coronary artery disease. And type 1 means there is no exercise induced angina and type 2 means yes.
+          </p>
+          {% endif %}
+
+
+          <!-- ST Depression -->
+          {% if graph_no == 8 %}
+          <p>
+              The ST Depression values range is from 0 to 8, so we separate the data into four group type, from 0 to 8, each interval is 2, so we have type one to four. And most of people got the type one and few people get observation over four.
+          </p>
+          {% endif %}
+
+
+          <!-- Slope of peak exercise ST Segment -->
+          {% if graph_no == 9 %}
+          <p>
+              The slope of the peak exercise ST segment. Type means the value of the slope of the peak exercise ST segment, and obviously people who is under 30 seldem observed, the symptom always observed at age over 30.
+          </p>
+          {% endif %}
+
+
+
+          <!-- Major Vessels -->
+          {% if graph_no == 10 %}
+          <p>
+              Number of major vessels (0-3) colored by fluoroscopy. Type one to four represent the different color.
+          </p>
+          {% endif %}
+
+          <!-- Thalassemia -->
+          {% if graph_no == 11 %}
+          <p>
+              Thalassemia (thal-uh-SEE-me-uh) is an inherited blood disorder characterized by less hemoglobin and fewer red blood cells in your body than normal. Hemoglobin is the substance in your red blood cells that allows them to carry oxygen. The low hemoglobin and fewer red blood cells of thalassemia may cause anemia, leaving you fatigued. And type one is normal, two is fixed defect, three is reversable defect.
+          </p>
+          {% endif %}
+
+        <!-- Make sure to follow this exact same process for the next 11 graphs -->
+      </div>
+
+{% endblock %}

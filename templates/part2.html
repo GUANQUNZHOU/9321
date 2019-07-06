@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block body_contents %}
+
+      <div class = "specific_graph">
+          <h1> Feature Selection </h1>
+          <p> To prevent overfitting in our prediction for the next part. We have decided to employ Chi Squared algorithm to
+          select the important features that are related to the target attribute </p>
+
+
+          <h2> Chi Squared</h2>
+          <p> The chi squared values are ranked by p-values. The chi-squared method is a
+          test of independence of two variables. The higher the value the more likely we should use this feature. </p>
+          <p>
+
+            <table>
+            {% for key, value in chi_chart.items() %}
+               <tr>
+                    <th> {{ key }} </th>
+                    <td> {{ value }} </td>
+               </tr>
+            {% endfor %}
+            </table>
+          </p>
+
+
+          <p> By observation maximum heart rate, major vessel, ST Depression and Thalassemia are top contenders in
+              contributing to Heart Disease.
+          </p>
+
+      </div>
+
+{% endblock %}

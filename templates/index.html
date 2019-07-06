@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block body_contents %}
+
+      <div class = "sec1"></div>
+
+      <div class = "content1">
+
+        <p id = "test">
+            A project by
+            <br></br>
+            Thomas, Fan, Benjamin and Kevin
+        </p>
+      </div>
+
+      <div class = "content2">
+        <h1> Part 1 </h1>
+          <p> In part 1 we have segregated all of the graphs into groups of age and sex. This is done without the target
+              attribute, as we want to just attain a big picture of how age and sex plays a role in the effect of each
+              of the 13 key attributes given.
+          </p>
+      </div>
+
+    <div class = "content2">
+        <h1> Part 2 </h1>
+          <p> In Part 2 we have decided to employ certain methods to find the attributes that are more likely to be the cause
+              of heart disease. By using the target attribute, we used multiple algorithms in determining which features play
+              the bigger role in relation to heart disease
+          </p>
+
+        <p>
+            Further more we have used unsupervised techniques to find certain trends (exploratory data techniques). We have used clustering
+            to determine specific similarities with certain attributes. We did our clustering by using PCA to reduce the dimensions of
+            all our attributes to a dimension of two.
+        </p>
+    </div>
+
+    <div class = "content2">
+        <h1> Part 3 </h1>
+          <p> In part 3 we have applied the previous ranking of attributes. Then we trained our model using logistic regression by cross validation
+              which splits out data into training and testing sets. Then it measures the accuracy of each of these, which we graph after showing the prediction.
+              In the prediction we determine whether certain attributes will be likely to cause heart disease or not, via a user form
+          </p>
+
+    </div>
+
+
+{% endblock %}

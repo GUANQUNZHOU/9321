@@ -1,0 +1,460 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu Mono', monospace;
+  height: 100%;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  padding: 10px 100px;
+  box-sizing: border-box;
+  transition: .3s;
+  background-color: #e79c9c;
+  z-index: 2;
+}
+
+nav.black {
+  background: rgba(0,0,0,0.8);
+  height: 100px;
+  padding: 10px 100px;
+}
+
+nav .logo {
+  padding: 20px 10px;
+  padding-top: 20px;
+  height: 50px;
+  float: left;
+  font-size: 40px;
+  transition: .3s;
+  color: white;
+  background-color: black;
+
+  padding-bottom: 30px;
+  padding-top: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+nav.black .logo {
+  color: #0e1616;
+}
+
+nav ul {
+  list-style: none;
+  float: right;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  line-height: 80px;
+  padding: 10px 15px;
+  color: #151515;
+  margin: 30px auto;
+  text-align: justify;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .3s;
+}
+
+nav.black ul li a {
+  color: #fff;
+}
+
+nav ul li a:focus {
+  outline: none;
+}
+
+nav ul li a.active {
+  background: #E2472F;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.sec1 {
+  width: 100%;
+  height: 100vh;
+  background-image: url('../static/background.png');
+  background-size: cover;
+
+}
+
+
+.content1 {
+  height:100%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.content1 p {
+  width: 70%;
+  margin: 0px auto;
+  text-align: center;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.content1 h1 {
+  font-size: 30px;
+  align-content: center;
+  text-align: center;
+}
+
+.content1 mark {
+  background-color: black;
+  color: white;
+  padding: 2px;
+}
+
+.content1 h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#test {
+  width: 40%;
+  background-color: black;
+  color: white;
+}
+
+.test-wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 1em;
+}
+
+
+.content2 {
+  height:100%;
+  margin-top: 50px;
+  padding-bottom: 20px;
+  padding-top: 40px;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.content2 h1 {
+  font-size: 50px;
+  align-content: center;
+  text-align: center;
+}
+
+.content2 p {
+  font-size: 20px;
+  align-content: center;
+  text-align: center;
+}
+
+.specific_graph{
+  height:100%;
+  margin-top: 200px;
+  padding-bottom: 20px;
+  padding-top: 40px;
+  margin-left: 200px;
+  margin-right: 200px;
+  z-index: -1;
+}
+
+.specific_graph h1 {
+  font-size: 50px;
+  align-content: center;
+  text-align: center;
+}
+
+.specific_graph p {
+  font-size: 20px;
+  align-content: center;
+  text-align: center;
+}
+
+.specific_graph img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+}
+
+.specific_graph h2 {
+  font-size: 40px;
+  align-content: center;
+  text-align: center;
+}
+
+
+.grid {
+  /* Grid Fallback */
+  display: flex;
+  flex-wrap: wrap;
+
+  /* Supports Grid */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: minmax(150px, auto);
+  grid-gap: 1em;
+}
+
+.module {
+  /* Demo-Specific Styles */
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+
+
+  /* Flex Fallback */
+  margin-left: 5px;
+  margin-right: 5px;
+  flex: 1 1 200px;
+  text_decoration: none;
+  color: pink;
+  text_align: center;
+
+}
+
+.a module {
+    text_decoration: none;
+}
+
+
+/* If Grid is supported, remove the margin we set for the fallback */
+@supports (display: grid) {
+  .module {
+    margin: 0;
+  }
+}
+
+
+table a:link {
+	color: #666;
+	font-weight: bold;
+	text-decoration:none;
+}
+table a:visited {
+	color: #999999;
+	font-weight:bold;
+	text-decoration:none;
+}
+table a:active,
+table a:hover {
+	color: #bd5a35;
+	text-decoration:underline;
+}
+table {
+	font-family:Arial, Helvetica, sans-serif;
+	color:#666;
+	font-size:12px;
+	text-shadow: 1px 1px 0px #fff;
+	background:#eaebec;
+	margin:20px;
+	border:#ccc 1px solid;
+
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+
+	-moz-box-shadow: 0 1px 2px #d1d1d1;
+	-webkit-box-shadow: 0 1px 2px #d1d1d1;
+	box-shadow: 0 1px 2px #d1d1d1;
+    margin: 0px auto;
+
+}
+table th {
+	padding:21px 25px 22px 25px;
+	border-top:1px solid #fafafa;
+	border-bottom:1px solid #e0e0e0;
+
+	background: #ededed;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
+	background: -moz-linear-gradient(top,  #ededed,  #ebebeb);
+}
+table th:first-child {
+	text-align: left;
+	padding-left:20px;
+}
+table tr:first-child th:first-child {
+	-moz-border-radius-topleft:3px;
+	-webkit-border-top-left-radius:3px;
+	border-top-left-radius:3px;
+}
+table tr:first-child th:last-child {
+	-moz-border-radius-topright:3px;
+	-webkit-border-top-right-radius:3px;
+	border-top-right-radius:3px;
+}
+table tr {
+	text-align: center;
+	padding-left:20px;
+}
+table td:first-child {
+	text-align: left;
+	padding-left:20px;
+	border-left: 0;
+}
+table td {
+	padding:18px;
+	border-top: 1px solid #ffffff;
+	border-bottom:1px solid #e0e0e0;
+	border-left: 1px solid #e0e0e0;
+
+	background: #fafafa;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
+	background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);
+}
+table tr.even td {
+	background: #f6f6f6;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f6f6f6));
+	background: -moz-linear-gradient(top,  #f8f8f8,  #f6f6f6);
+}
+table tr:last-child td {
+	border-bottom:0;
+}
+table tr:last-child td:first-child {
+	-moz-border-radius-bottomleft:3px;
+	-webkit-border-bottom-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+table tr:last-child td:last-child {
+	-moz-border-radius-bottomright:3px;
+	-webkit-border-bottom-right-radius:3px;
+	border-bottom-right-radius:3px;
+}
+table tr:hover td {
+	background: #f2f2f2;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
+	background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);
+}
+
+legend {
+    background-color: #000;
+    color: #fff;
+    padding: 3px 6px;
+}
+
+.output {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+    margin: .4rem;
+}
+
+
+
+fieldset {
+  padding: 1em;
+  font:80%/1 sans-serif;
+  }
+
+.simple_form {
+  margin-bottom: 10px;
+  text-align: center;
+  margin-right: 10px;
+  vertical-align: -2px;
+  margin-left: 2px;
+
+}
+
+
+.form_dec{
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    border:1px solid white;
+    height: 40px;
+    width: 40%;
+    margin: 0 auto;
+    position: relative;
+    background-color: white;
+    font-size: 35px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    background: rgb(230, 230, 230);
+    color: black;
+    font-size: 20px;
+    z-index:1;
+}
+
+.checkbox_dec {
+    width: 42%;
+    height: 50%;
+}
+
+
+fieldset{
+    border:0 none;
+}
+
+fieldset .fd{
+    text-align: center;
+}
+
+fieldset div{
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
+  font-size: 15px;
+}
+
+.button_dec {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+
+}
+
+}
+
+.button_dec:active {
+  transform: translateY(10px);
+  transition: 0.5s;
+}
+
+#Go_back_button {
+  position:fixed; 
+  top:150px;
+  left:100px;
+  background-color: green;
+  padding: .5em;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 6px;
+  color: #fff;
+  font-family: 'Oswald';
+  font-size: 20px;
+  text-decoration: none;
+  border: none;
+}
+
+#Go_back_button:hover {
+  border: none;
+  background: orange;
+  box-shadow: 0px 0px 1px #777;
+}
+
+#Go_back_button:active {
+  transform: translateY(10px);
+  transition: 1s;
+}
